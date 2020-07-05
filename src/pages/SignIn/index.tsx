@@ -24,7 +24,7 @@ const SignIn: React.FC = () => {
   return (
     <Container>
       <Content>
-        {/* <h1>Kiara System Control</h1> */}
+        <img src={logoImg} alt="Gobarber" />
         <form onSubmit={handleLogin}>
           <h1>Acessar Sistema</h1>
 

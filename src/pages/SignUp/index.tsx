@@ -16,19 +16,21 @@ interface SignUpFormData {
   password: string;
 }
 
-function handleSubmit(){
-  console.log("enviar form");
-}
+
 const SignUp: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
+  function handleSubmit(data :object): void{
+    console.log(data);
+  }
+  
   return (
     <Container>
       <Background />
 
       <Content>
         <AnimationContainer>
-          {/* <img src={logoImg} alt="GoBarber" /> */}
+          <img src={logoImg} alt="GoBarber" />
 
           <Form ref={formRef} onSubmit={handleSubmit} >
             <h1>Solicitar Acesso</h1>
