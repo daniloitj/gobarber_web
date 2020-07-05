@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
-import signupImg from '../../assets/signin.png';
+import signupImg from '../../assets/signup.png';
 
 export const Container = styled.div`
   height: 100vh;
@@ -56,7 +56,7 @@ export const AnimationContainer = styled.div`
   }
   /* somente ancoras ('a') diretamente dentro do nivel do Content */
   > a {
-    color: #F4EDE8;
+    color: #ff9000;
     display: block;
     margin-top: 24px;
     text-decoration: none;
