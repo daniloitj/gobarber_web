@@ -45,11 +45,11 @@ const Signup: React.FC = () => {
 
         await api.post('users', data);
 
-        // addToast({
-        //   type: 'success',
-        //   title: 'Cadastro realizado!',
-        //   description: 'Já podes fazer seu logon no GoBarber Web',
-        // });
+        addToast({
+          type: 'success',
+          title: 'Cadastro realizado!',
+          description: 'Já podes fazer seu logon no GoBarber Web',
+        });
 
         history.push('/');
       } catch (err) {
@@ -59,12 +59,12 @@ const Signup: React.FC = () => {
           return;
         }
 
-        // addToast({
-        //   type: 'error',
-        //   title: 'Erro ao fazer o cadastro',
-        //   description:
-        //     'Ocorreu algum erro ao fazer o cadastro, tente novamente',
-        // });
+        addToast({
+          type: 'error',
+          title: 'Erro ao fazer o cadastro',
+          description:
+            'Ocorreu algum erro ao fazer o cadastro, tente novamente',
+        });
       }
     },
     [addToast, history]

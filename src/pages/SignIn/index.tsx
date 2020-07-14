@@ -12,7 +12,7 @@ import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 import getValidationErrors from '../../utils/getValidationErrors';
-import { useAuth } from '../../hooks/AuthContext';
+import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
 
 interface SignInFormData {
@@ -45,7 +45,7 @@ const SignIn: React.FC = () => {
           password: data.password,
         });
         
-        // history.push('/dashboard');
+        history.push('/dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           console.error(err);
